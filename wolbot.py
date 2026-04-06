@@ -155,7 +155,8 @@ def logs(update, context):
     if update.effective_user.id != ADMIN_ID:
         update.message.reply_text("У вас нет доступа.")
         return
-if not os.path.exists("bot.log"):
+
+    if not os.path.exists("bot.log"):
         update.message.reply_text("Логи пусты.")
         return
 
@@ -252,5 +253,5 @@ def main():
     updater.idle()
 
 
-if name == "main":
+if __name__ == "__main__":
     main()
