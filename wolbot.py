@@ -31,7 +31,7 @@ def save_config(user_id, data):
 # === KEYBOARDS ===
 def main_menu(is_admin=False):
     buttons = [
-        ["🔧 Настроить ПК", "⚡ Включить ПК"],
+        ["🔧 Настроить ПК", "⚡️ Включить ПК"],
         ["ℹ️ Помощь"]
     ]
     if is_admin:
@@ -188,7 +188,7 @@ def help_message():
         "• Сначала протестировать WoL внутри сети\n"
         "• Потом через интернет\n"
         "• Потом через Telegram‑бота\n\n"
-        "❗ *5. Частые проблемы*\n"
+        "❗️ *5. Частые проблемы*\n"
         "• ПК включается только из сна — включите PME\n"
         "• WoL работает 5–30 минут — включите ARP Binding\n"
         "• Ошибка 4937 — неверный IP в пробросе порта\n"
@@ -208,7 +208,7 @@ def router(update, context):
     if text == "🔧 Настроить ПК":
         return setup_start(update, context)
 
-    if text == "⚡ Включить ПК":
+    if text == "⚡️ Включить ПК":
         return wake(update, context)
 
     if text == "ℹ️ Помощь":
